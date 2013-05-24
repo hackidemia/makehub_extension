@@ -1,1 +1,2 @@
-inject.js
+alert(document.location);
+

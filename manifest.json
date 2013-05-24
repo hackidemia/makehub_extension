@@ -3,8 +3,9 @@
  "name": "Makehub extension",
  "description": "This extension allows you to send intructions and project links to your makehub projects",
  "version": "1",
- "permissions": [ "bookmarks","http://*/*", "background"],
+ "manifest_version": 2,
+ "permissions": [ "bookmarks","http://*/*", "background","tabs"],
  "background_page": "background.html",
  "content_scripts": [{"matches": ["http://*/*"],"js": ["inject.js"]}],
- "browser_action": {"default_icon": "16x16.png","popup": "popup.html"}
+ "browser_action": {"default_icon": "icon.png","default_popup": "popup.html"}
 }
