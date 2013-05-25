@@ -1,0 +1,84 @@
+<html>
+<head>
+  <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="jquery-ui-1.8.10.custom.min.js"></script>
+  <script type="text/javascript" src="asana.js"></script>
+  <script type="text/javascript" src="options.js"></script>
+  <script type="text/javascript" src="api_bridge.js"></script>
+  <script type="text/javascript" src="server_model.js"></script>
+  <link rel="stylesheet" href="common.css"/>
+  <link rel="stylesheet" href="popup_style.css"/>
+</head>
+
+<body>
+
+  <div id="banner">
+    Add to Asana
+    <a id="close-banner" class="close-x"></a>
+  </div>
+
+  <div id="error" style="display:none">
+    <span class="error-icon"></span>
+    Sorry, an error occurred. Please try again later.
+  </div>
+
+  <div id="content">
+    <div id="add_view" style="display:none">
+      <table class="form">
+        <tr>
+          <td class="field-name">Name:</td>
+          <td class="field-value">
+            <input id="name"/>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="field-name">Notes:</td>
+          <td class="field-value">
+            <textarea id="notes"></textarea>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="field-name">Workspace:</td>
+          <td class="field-value">
+            <select id="workspace"><option>Loading...</option></select>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="field-name">Assignee:</td>
+          <td class="field-value">
+            <select id="assignee"><option>Loading...</option></select>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="field-name"></td>
+          <td class="field-value">
+            <div id="add_button" tabindex="0" class="button primary-button disabled">
+              <span class="button-text">Add to Asana</span>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="success_view" style="display:none">
+      <span class="success-icon"></span>
+      Created task <a id="new_task_link" target="_blank" href=""></a>.
+    </div>
+
+    <div id="login_view" style="display:none">
+      Please <a id="login_link" href="#">log into Asana</a> to start adding
+      tasks.
+    </div>
+
+  </div>
+
+</body>
+
+<!-- Adds event handlers to elements, so we include at the end -->
+<script type="text/javascript" src="popup.js"></script>
+
+</html>
